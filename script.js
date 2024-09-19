@@ -19,3 +19,7 @@ document.getElementById("knowledge").addEventListener("click", function() {
 document.getElementById("goBackButton").addEventListener("click", function() {
       window.location.href = "index.html";
 });
+
+document.getElementById("SeeHistory").addEventListener("click", function() {
+      window.location.href = "History.html";
+});
