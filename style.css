@@ -6,7 +6,7 @@ body {
   }
   
   header {
-    background-color: #001f3f;
+    background-color: #0074D9;
     color: white;
     padding: 20px;
     text-align: center;
@@ -25,7 +25,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   button {
-    background-color: #001f3f; 
+    background-color: #0074D9; 
     color: white;             
     padding: 4px 20px;     
     border: none;            
@@ -33,19 +33,20 @@ body {
     cursor: pointer;          
   }
 
-button:hover {
-  background-color: #0074D9; 
-}
+  button:hover {
+    background-color: #001f3f; 
+  }
   
   #map {
     height: 400px;
     margin-top: 20px;
+    margin-bottom:40px;
   }
   
   footer {
     text-align: center;
     padding: 10px;
-    background-color: #001f3f;
+    background-color: #0074D9;
     color: white;
     position: fixed;
     width: 100%;
