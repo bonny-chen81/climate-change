@@ -14,3 +14,8 @@ document.getElementById("Floodprevention").addEventListener("click", function() 
 document.getElementById("knowledge").addEventListener("click", function() {
     window.location.href = "knowledge.html";  
 });
+
+
+document.getElementById("goBackButton").addEventListener("click", function() {
+      window.location.href = "index.html";
+});
