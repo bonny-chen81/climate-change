@@ -2,10 +2,10 @@
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--設置視窗的寬度，確保在各種設備上適當顯示-->
   <title>雨民同在</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="style.css">//引入自定義的 CSS 文件
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" /> <!--引入 Leaflet.js 的 CSS 文件，提供地圖樣式-->
 </head>
 <body>
   <header>
@@ -21,8 +21,11 @@
   <section>
     <h2>淹水潛勢圖</h2>
     <p>使用下方的互動地圖來檢視可能受淹水、土石流等影響的地區。</p>
-    <div id="map"></div>
+    <div id="map"></div>  <!--用於顯示地圖的區域-->
   </section>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script> <!--引入 Leaflet.js 的 JavaScript 庫-->
+  <script src="script.js"></script> <!--引入自定義的 JavaScript 文件-->
   
   <section>
     <h3>淹水防治</h3>
@@ -34,6 +37,5 @@
     <p>&copy; 2024 雨民同在</p>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
