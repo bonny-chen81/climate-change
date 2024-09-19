@@ -30,7 +30,8 @@ body {
     padding: 4px 20px;     
     border: none;            
     border-radius: 5px;       
-    cursor: pointer;          
+    cursor: pointer; 
+    margin-left: 20px;
   }
 
   button:hover {
