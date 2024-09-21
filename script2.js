@@ -23,13 +23,16 @@ if (goBackButton) {
     });
 }
 
-var seeHistoryBtn = document.getElementById("SeeHistory");
-if (seeHistoryBtn) {
-    seeHistoryBtn.addEventListener("click", function() {
-        console.log("click!");
-        window.location.href = "History.html";
-    });
-}
+document.addEventListener('DOMContentLoaded', function() {
+    var seeHistoryBtn = document.getElementById("SeeHistory");
+    if (seeHistoryBtn) {
+        seeHistoryBtn.addEventListener("click", function() {
+            console.log("click!"); // 當按下按鈕時在控制台顯示
+            window.location.href = "History.html"; // 跳轉到歷史災情頁面
+        });
+    }
+});
+
 //document.getElementById("Floodprevention").addEventListener("click", function() {
    // window.location.href = "flood-prevention.html";  
 //});
