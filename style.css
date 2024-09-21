@@ -40,13 +40,22 @@ body {
     border: none;            
     border-radius: 5px;       
     cursor: pointer; 
-    margin-left: 20px;
     margin-bottom:40px;
   }
 
   button:hover {
     background-color: #C4E1FF; 
   }
+
+  buttonback {
+    background-color: #7373B9; 
+    color: white;             
+    padding: 4px 20px;     
+    border: none;            
+    border-radius: 5px;       
+    cursor: pointer; 
+    margin-left: 20px;
+  }   
   
   #map {
     height: 400px;
