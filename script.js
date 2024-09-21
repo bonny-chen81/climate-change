@@ -33,6 +33,7 @@ if (goBackButton) {
 var seeHistoryBtn = document.getElementById("SeeHistory");
 if (seeHistoryBtn) {
     seeHistoryBtn.addEventListener("click", function() {
+        console.log("click!");
         window.location.href = "History.html";
     });
 }
