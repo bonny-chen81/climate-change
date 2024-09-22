@@ -5,34 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>淹水防治</title>
   <link rel="stylesheet" href="style.css"> <!-- 引入自定義的 CSS 文件 -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- 引入 Chart.js -->
   <script src="script.js"></script>
 </head>
 <body>
   <header>
     <h1>歷史災情</h1>
   </header>
-  
-  <section>
+
+  <!-- 分頁導航 -->
+  <nav>
+    <button class="tablink" onclick="openPage('disaster', this)" id="defaultOpen">歷史災情</button>
+    <button class="tablink" onclick="openPage('chart', this)">歷史淹水災情圖表</button>
+  </nav>
+
+  <!-- 分頁內容 1: 歷史災情 -->
+  <div id="disaster" class="tabcontent">
     <h2>1959年：八七水災</h2>
-    <p>時間：1959年8月7日
-      地點：台灣南部
-      死傷情況：超過600人死亡
-      農業損失：約新台幣15億元
+    <p>時間：1959年8月7日<br>
+      地點：台灣南部<br>
+      死傷情況：超過600人死亡<br>
+      農業損失：約新台幣15億元<br>
       事件簡述：颱風引發大範圍豪雨，嘉南平原等地大量農田被淹沒，稻米、甘蔗等作物損失慘重。
     </p>
-  </section>
-  
-  <section>
     <h3>1962年：葛樂禮颱風</h3>
-    <p>時間：1962年7月30日
-        地點：全台
-        死傷情況：156人死亡，138人失蹤
-        農業損失：約新台幣18億元
+    <p>時間：1962年7月30日<br>
+        地點：全台<br>
+        死傷情況：156人死亡，138人失蹤<br>
+        農業損失：約新台幣18億元<br>
         事件簡述：大規模降雨影響北、中、南部地區，稻田、蔬菜田及果園嚴重受損。
     </p>
-  </section>
+  </div>
 
-   <script>
+  <!-- 分頁內容 2: 歷史淹水災情圖表 -->
+  <div id="chart" class="tabcontent">
+    <h2>歷史淹水災情</h2>
+    <canvas id="floodBarChart" width="400" height="200"></canvas>
+  </div>
+
+  <!-- 返回主畫面的按鈕 -->
+  <button id="goBackButton" onclick="openPage('disaster', this)">返回主畫面</button>
+
+  <footer>
+    <p>&copy; 2024 雨民同在</p>
+  </footer>
+
+  <script>
     // 用於切換分頁
     function openPage(pageName, elmnt) {
       var i, tabcontent, tablinks;
@@ -139,12 +157,6 @@
     .tabcontent h2 {
       text-align: center;
     }
-
-  <!-- Corrected button tag -->
-  <button id="goBackButton">返回主畫面</button>
-  
-  <footer>
-    <p>&copy; 2024 雨民同在</p>
-  </footer>
+  </style>
 </body>
 </html>
