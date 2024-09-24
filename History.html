@@ -110,22 +110,38 @@
                 borderWidth: 1
             }]
         },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true,
-                    title: {
-                        display: true,
-                        text: '高度 (公分)'
+      options: {
+        scales: {
+            y: {
+                beginAtZero: true,
+                title: {
+                    display: true,
+                    text: '高度 (公分)',
+                    font: {  // 設置 Y 軸標題字型大小
+                        size: 20
                     }
                 },
-                x: {
-                    title: {
-                        display: true,
-                        text: '事件'
+                ticks: {
+                    font: {  // 設置 Y 軸刻度字型大小
+                        size: 20
                     }
                 }
             },
+            x: {
+                title: {
+                    display: true,
+                    text: '事件',
+                    font: {  // 設置 X 軸標題字型大小
+                        size: 20
+                    }
+                },
+                ticks: {
+                    font: {  // 設置 X 軸刻度字型大小
+                        size: 20
+                    }
+                }
+            }
+        },
             plugins: {
                 title: {
                     display: true,
