@@ -51,6 +51,26 @@
     </p>
   </section>
 </div>
+ <script>
+    // 用於切換分頁
+    function openPage(pageName, elmnt) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = "#ccc";
+    }
+
+    // 預設開啟的分頁
+    window.onload = function() {
+      openPage('disaster', document.getElementById('defaultOpen'));
+    };
 
   <!-- 分頁內容 2: 歷史淹水災情圖表 -->
   <div id="chart" class="tabcontent">
