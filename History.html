@@ -5,24 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>淹水防治</title>
   <link rel="stylesheet" href="style.css"> <!-- 引入自定義的 CSS 文件 -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- 引入 Chart.js -->
-  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- 引入 Chart.js 庫 -->
 </head>
 <body>
+
   <header>
     <h1>歷史災情</h1>
   </header>
 
-  <!-- 分頁導航 -->
-  <nav>
-    <button class="tablink" onclick="openPage('disaster', this)" id="defaultOpen">歷史災情</button>
-    <button class="tablink" onclick="openPage('chart', this)">歷史淹水災情圖表</button>
-  </nav>
-
-  <!-- 分頁內容 1: 歷史災情 -->
-<div id="disaster" class="tabcontent">
-  <section class="disaster-section">
-    <h2 class="left-align">1959年：八七水災</h2>
+  <section>
+    <h2>1959年：八七水災</h2>
     <p>時間：1959年8月7日<br>
       地點：台灣南部<br>
       死傷情況：超過600人死亡<br>
@@ -30,129 +22,42 @@
       事件簡述：颱風引發大範圍豪雨，嘉南平原等地大量農田被淹沒，稻米、甘蔗等作物損失慘重。
     </p>
   </section>
-
-  <section class="disaster-section">
-    <h3>1962年：葛樂禮颱風</h3>
+  
+  <section>
+    <h2>1962年：葛樂禮颱風</h3>
     <p>時間：1962年7月30日<br>
-      地點：全台<br>
-      死傷情況：156人死亡，138人失蹤<br>
-      農業損失：約新台幣18億元<br>
-      事件簡述：大規模降雨影響北、中、南部地區，稻田、蔬菜田及果園嚴重受損。
+        地點：全台<br>
+        死傷情況：156人死亡，138人失蹤<br>
+        農業損失：約新台幣18億元<br>
+        事件簡述：大規模降雨影響北、中、南部地區，稻田、蔬菜田及果園嚴重受損。
     </p>
   </section>
 
-  <section class="disaster-section">
-    <h3>1998年：賀伯颱風</h3>
+  <section>
+    <h2>1998年：賀伯颱風</h3>
     <p>時間：1998年9月17日<br>
       地點：台灣東部<br>
       死傷情況：87人死亡<br>
-      //農業損失：約新台幣12億元<br>
+      農業損失：約新台幣12億元<br>
       事件簡述：賀伯颱風帶來嚴重降雨，導致花蓮、台東地區發生大規模淹水，農田與基礎設施受到嚴重影響。
     </p>
   </section>
-</div>
- <script>
-    // 用於切換分頁
-    function openPage(pageName, elmnt) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-      tablinks = document.getElementsByClassName("tablink");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].style.backgroundColor = "";
-      }
-      document.getElementById(pageName).style.display = "block";
-      elmnt.style.backgroundColor = "#ccc";
-    }
+  
+  <section>
+    <div id="chart" class="tabcontent">
+      <h1>歷史淹水災情表格</h2>
+      <canvas id="floodBarChart" width="400" height="200"></canvas>
+    </div>
+  </section>
 
-    // 預設開啟的分頁
-    window.onload = function() {
-      openPage('disaster', document.getElementById('defaultOpen'));
-    };
+  <section>
+    <button id="goBackButton">返回主畫面</button>
+  </section>
 
-  <!-- 分頁內容 2: 歷史淹水災情圖表 -->
-  <div id="chart" class="tabcontent">
-    <h2>歷史淹水災情</h2>
-    <canvas id="floodBarChart" width="400" height="200"></canvas>
-  </div>
+  <script src="script3chart.js"></script>
 
-
-
-  <footer>
-    <p>&copy; 2024 雨民同在</p>
-  </footer>
-
- 
-    // 設置柱狀圖
-    const ctx = document.getElementById('floodBarChart').getContext('2d');
-    const floodBarChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ['水利署淹水標準', '一個人的身高', '納莉颱風最大淹水高度', '八二三水災最大淹水高度'],
-            datasets: [{
-                label: '高度 (公分)',
-                data: [27.5, 165, 230, 140],
-                backgroundColor: [
-                    'rgba(54, 162, 235, 0.6)',
-                    'rgba(75, 192, 192, 0.6)',
-                    'rgba(255, 99, 132, 0.6)',
-                    'rgba(153, 102, 255, 0.6)'
-                ],
-                borderColor: [
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(153, 102, 255, 1)'
-                ],
-                borderWidth: 1
-            }]
-        },
-      options: {
-        scales: {
-            y: {
-                beginAtZero: true,
-                title: {
-                    display: true,
-                    text: '高度 (公分)',
-                    font: {  // 設置 Y 軸標題字型大小
-                        size: 20
-                    }
-                },
-                ticks: {
-                    font: {  // 設置 Y 軸刻度字型大小
-                        size: 20
-                    }
-                }
-            },
-            x: {
-                title: {
-                    display: true,
-                    text: '事件',
-                    font: {  // 設置 X 軸標題字型大小
-                        size: 20
-                    }
-                },
-                ticks: {
-                    font: {  // 設置 X 軸刻度字型大小
-                        size: 20
-                    }
-                }
-            }
-        },
-            plugins: {
-                title: {
-                    display: true,
-                    text: '歷史淹水高度比較圖'
-                  font: {  
-                        size: 24
-                    }
-                },
-                }
-            }
-        }
-    });
+</body>
+</html>
   </script>
 
   
