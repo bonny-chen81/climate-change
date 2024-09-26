@@ -2,19 +2,6 @@
 
 
 //按鈕區
-var floodPreventionBtn = document.getElementById("Floodprevention");
-if (floodPreventionBtn) {
-    floodPreventionBtn.addEventListener("click", function() {
-        window.location.href = "flood-prevention.html";  
-    });
-}
-
-var knowledgeBtn = document.getElementById("knowledge");
-if (knowledgeBtn) {
-    knowledgeBtn.addEventListener("click", function() {
-        window.location.href = "knowledge.html";  
-    });
-}
 
 var goBackButton = document.getElementById("goBackButton");
 if (goBackButton) {
@@ -32,15 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-
-//document.getElementById("Floodprevention").addEventListener("click", function() {
-   // window.location.href = "flood-prevention.html";  
-//});
-
-//document.getElementById("knowledge").addEventListener("click", function() {
-//    window.location.href = "knowledge.html";  
-//});
-
 
 //document.getElementById("goBackButton").addEventListener("click", function() {
  //     window.location.href = "index.html";
