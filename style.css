@@ -32,6 +32,7 @@ body {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
   }
   button {
     background-color: #7373B9; 
@@ -40,7 +41,6 @@ body {
     border: none;            
     border-radius: 5px;       
     cursor: pointer; 
-    margin-bottom:40px;
   }
 
   button:hover {
@@ -54,9 +54,7 @@ body {
     border: none;            
     border-radius: 5px;       
     cursor: pointer;
-    margin-left:60px;
   }
-
 
   #map {
     height: 400px;
@@ -69,15 +67,4 @@ body {
     margin-top: 20px;
     margin-bottom:40px;
   }
-  footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #7373B9;
-    color: white;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    z-index: 1000;
-  }
- 
   
