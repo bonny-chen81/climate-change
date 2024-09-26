@@ -64,27 +64,7 @@
     <p>&copy; 2024 雨民同在</p>
   </footer>
 
-  <script>
-    // 用於切換分頁
-    function openPage(pageName, elmnt) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-      tablinks = document.getElementsByClassName("tablink");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].style.backgroundColor = "";
-      }
-      document.getElementById(pageName).style.display = "block";
-      elmnt.style.backgroundColor = "#ccc";
-    }
-
-    // 預設開啟的分頁
-    window.onload = function() {
-      openPage('disaster', document.getElementById('defaultOpen'));
-    };
-
+ 
     // 設置柱狀圖
     const ctx = document.getElementById('floodBarChart').getContext('2d');
     const floodBarChart = new Chart(ctx, {
