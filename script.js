@@ -39,22 +39,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-//document.getElementById("Floodprevention").addEventListener("click", function() {
-   // window.location.href = "flood-prevention.html";  
-//});
-
-//document.getElementById("knowledge").addEventListener("click", function() {
-//    window.location.href = "knowledge.html";  
-//});
-
-
-//document.getElementById("goBackButton").addEventListener("click", function() {
- //     window.location.href = "index.html";
-//});
-
-//document.getElementById("SeeHistory").addEventListener("click", function() {
-
-//      window.location.href = "History.html";
-//});
-
+var quizBtn = document.getElementById("quiz");
+if(quizBtn){
+    quizBtn.addEventListener("click",function() {
+        window.location.href = "quiz.html";
+    });
+}
 
