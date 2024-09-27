@@ -21,6 +21,11 @@ body {
     font-size: 1.5em; 
   }
 
+  h3 {
+    font-size: 1.25em;
+    color:darkslateblue;
+  }
+
   p{
     font-size: 1em;
   }
@@ -38,8 +43,9 @@ body {
     background-color: #7373B9; 
     color: white;             
     padding: 4px 20px;     
-    border: none;            
-    border-radius: 5px;       
+    border: none; 
+    border-radius: 5px;            
+    height:30px;      
     cursor: pointer; 
   }
 
@@ -68,3 +74,54 @@ body {
     margin-bottom:40px;
   }
   
+  #quiz-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 600px; 
+    height: 180px; 
+    margin: 50px auto;
+    text-align: center;
+    color: #0160a4; 
+    font-size: 18px; 
+}
+
+
+.btn {
+    background-color: #7373B9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 4px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#result-container {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  margin: 50px auto;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+#result-container h2 {
+  color: #AE57A4; /* 改變標題顏色 */
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#result-text {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: 	#484891; /* 結果文字顏色 */
+}
