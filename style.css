@@ -6,15 +6,18 @@ body {
   }
   
   header {
-    background-color: #7373B9;
-    color: white;
-    padding: 20px;
-    text-align: center;
-  }
+    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20230425/pngtree-rain-water-drops-on-an-automobile-windshield-image_2517372.jpg'); 
+    background-position: center; /* 圖片居中 */
+    color: white; /* 文字顏色 */
+    text-align:center;
+    height: 30px;
+    padding: 65px 10px; /* 上下內邊距 */
+}
   
   h1 {
     margin: 0;
     font-size: 2em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
   }
 
   h2 {
@@ -119,6 +122,24 @@ body {
   font-size: 24px;
   margin-bottom: 20px;
 }
+
+#result-text {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: 	#484891; /* 結果文字顏色 */
+}
+
+.image-container {
+  text-align: center;
+}
+
+img {
+  max-width: 70%;
+  height: auto;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
 
 #result-text {
   font-size: 18px;
